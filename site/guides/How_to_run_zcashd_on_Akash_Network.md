@@ -31,34 +31,34 @@ Recommended Hardware: 4 CPU cores, 8 GB RAM, 300 GB Persistent* Storage - be sur
 
 ### 3. Install Dependencies & zcashd 
 
-> apt-get update && apt-get install apt-transport-https wget gnupg2
+- apt-get update && apt-get install apt-transport-https wget gnupg2
 
-> wget -qO - https://apt.z.cash/zcash.asc | gpg --import
+- wget -qO - https://apt.z.cash/zcash.asc | gpg --import
 
-> gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | apt-key add -
+- gpg --export B1C9095EAA1848DBB54D9DDA1D05FDC66B372CFE | apt-key add -
 
-> echo "deb [arch=amd64] https://apt.z.cash/ buster main" | tee /etc/apt/sources.list.d/zcash.list
+- echo "deb [arch=amd64] https://apt.z.cash/ buster main" | tee /etc/apt/sources.list.d/zcash.list
 
-> apt-get update && apt-get install zcash
+- apt-get update && apt-get install zcash
 
-> mkdir -p ~/.zcash
+- mkdir -p ~/.zcash
 
-> cd /mnt/data 
+- cd /mnt/data 
 
-> mkdir ./zcash
+- mkdir ./zcash
 
-> vi ~/.zcash/zcash.conf
+- vi ~/.zcash/zcash.conf
 
->  addnode=mainnet.z.cash
+-  addnode=mainnet.z.cash
 
->  datadir=/mnt/data/.zcash
+-  datadir=/mnt/data/.zcash
 
-> [ESC] + wq + Enter
+- [ESC] + wq + Enter
 
 
 ### 4. Start Zcashd & Sync
 
-> zcashd
+- zcashd
 
 - Estimated time for full sync 3 Days
 
